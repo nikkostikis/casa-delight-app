@@ -21,10 +21,10 @@ const Navbar = () => {
         </a>
         <div className="hidden md:flex items-center gap-8">
           {[
-            { label: "Αρχική", href: "#" },
-            { label: "Προϊόντα", href: "#products" },
-            { label: "Υπηρεσίες", href: "#services" },
-            { label: "Επικοινωνία", href: "#contact" },
+            { label: "Home", href: "#" },
+            { label: "Products", href: "#products" },
+            { label: "Services", href: "#services" },
+            { label: "Contact", href: "#contact" },
           ].map((link) => (
             <a
               key={link.label}

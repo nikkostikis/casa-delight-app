@@ -5,7 +5,7 @@ const ContactSection = () => {
     <section id="contact" className="py-24 md:py-32 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="font-heading text-4xl md:text-5xl font-light mb-2 text-foreground">
-          Επικοινωνία
+          Contact
         </h2>
         <div className="w-16 h-px bg-gold-gradient mx-auto mb-16" />
 
@@ -14,11 +14,11 @@ const ContactSection = () => {
             <MapPin className="w-6 h-6 text-primary" />
             <div>
               <p className="font-body text-sm tracking-widest uppercase text-muted-foreground mb-2">
-                Διεύθυνση
+                Address
               </p>
               <p className="font-body text-foreground">
-                Νικάνωρος 32<br />
-                54250, Θεσσαλονίκη
+                Nikanoros 32<br />
+                54250, Thessaloniki
               </p>
             </div>
           </div>
@@ -27,7 +27,7 @@ const ContactSection = () => {
             <Phone className="w-6 h-6 text-primary" />
             <div>
               <p className="font-body text-sm tracking-widest uppercase text-muted-foreground mb-2">
-                Τηλέφωνο
+                Phone
               </p>
               <a href="tel:+302310000000" className="font-body text-foreground hover:text-primary transition-colors">
                 +30 2310 000 000

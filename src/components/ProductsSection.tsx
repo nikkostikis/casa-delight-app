@@ -4,24 +4,24 @@ import furnitureImg from "@/assets/furniture.jpg";
 
 const products = [
   {
-    title: "Κουζίνα",
+    title: "Kitchen",
     brand: "Miton",
     description:
-      "Με τα μοντέλα της Miton η σχεδίαση και υλοποίηση της κουζίνας των ονείρων σας είναι εγγυημένη. Άψογο φινίρισμα, ποιοτικά υλικά και καινοτομία στους μηχανισμούς.",
+      "With Miton's models, designing and building your dream kitchen is guaranteed. Impeccable finishes, premium materials, and innovative mechanisms deliver a result that is both elegant and fully functional.",
     image: kitchenImg,
   },
   {
-    title: "Ντουλάπα",
+    title: "Wardrobe",
     brand: "Caccaro",
     description:
-      "Με 50 χρόνια εμπειρία στα έπιπλα κρεβατοκάμαρας, η Caccaro αποτελεί σίγουρη επιλογή. Αρμονικός συνδυασμός υπερσύγχρονων μεθόδων παραγωγής με ψυχή και μεράκι.",
+      "With 50 years of experience in bedroom furniture, Caccaro is a trusted choice for your space. The Italian house combines cutting-edge production methods with the soul and passion of its craftspeople.",
     image: wardrobeImg,
   },
   {
-    title: "Έπιπλο",
+    title: "Furniture",
     brand: "Midj · Tonelli",
     description:
-      "Δεν υπάρχει ανάγκη που να μην μπορεί να καλυφθεί, γούστο που να μην μπορεί να ικανοποιηθεί. Η Midj και η Tonelli θα γεμίσουν τον χώρο σας με τρόπο μοναδικό.",
+      "No need that can't be met, no taste that can't be satisfied. Midj and Tonelli will fill your space in a truly unique way with refined Italian design and craftsmanship.",
     image: furnitureImg,
   },
 ];
@@ -31,7 +31,7 @@ const ProductsSection = () => {
     <section id="products" className="py-24 md:py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-heading text-4xl md:text-5xl font-light text-center mb-2 text-foreground">
-          Προϊόντα
+          Products
         </h2>
         <div className="w-16 h-px bg-gold-gradient mx-auto mb-16" />
 

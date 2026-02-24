@@ -14,14 +14,14 @@ const HeroSection = () => {
           CASA <span className="text-gold-gradient font-medium">VAN.I</span>
         </h1>
         <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-muted-foreground mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          Αρχιτεκτονικός Σχεδιασμός · Ιταλικά Έπιπλα
+          Architectural Design · Italian Furniture
         </p>
         <div className="flex gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <a href="#products" className="px-8 py-3 border border-primary text-primary font-body text-sm tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-            Προϊόντα
+            Products
           </a>
           <a href="#contact" className="px-8 py-3 bg-primary text-primary-foreground font-body text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300">
-            Επικοινωνία
+            Contact
           </a>
         </div>
       </div>
