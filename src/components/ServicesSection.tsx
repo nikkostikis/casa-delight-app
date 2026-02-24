@@ -1,17 +1,18 @@
 import architectureImg from "@/assets/architecture.jpg";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const ServicesSection = () => {
   return (
     <section id="services" className="py-24 md:py-32 px-6 bg-secondary">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-20 items-center">
-        <div className="md:w-1/2">
+        <ScrollReveal className="md:w-1/2">
           <img
             src={architectureImg}
             alt="Architectural design"
             className="w-full h-80 md:h-[450px] object-cover"
           />
-        </div>
-        <div className="md:w-1/2 space-y-6">
+        </ScrollReveal>
+        <ScrollReveal className="md:w-1/2 space-y-6" delay={0.2}>
           <p className="text-primary font-body text-sm tracking-[0.2em] uppercase">
             Services
           </p>
@@ -29,7 +30,7 @@ const ServicesSection = () => {
           >
             Get in Touch
           </a>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
