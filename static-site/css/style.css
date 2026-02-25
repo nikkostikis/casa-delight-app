@@ -1,0 +1,273 @@
+/* ===== CSS Variables / Design Tokens ===== */
+:root {
+  --bg: hsl(220, 15%, 8%);
+  --fg: hsl(40, 20%, 92%);
+  --primary: hsl(38, 60%, 55%);
+  --primary-fg: hsl(220, 15%, 8%);
+  --secondary: hsl(220, 10%, 18%);
+  --muted-fg: hsl(220, 10%, 55%);
+  --border: hsl(220, 10%, 20%);
+  --gold-end: hsl(45, 70%, 65%);
+
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+img { display: block; }
+
+/* ===== Utility Classes ===== */
+.font-heading { font-family: var(--font-heading); }
+.font-body { font-family: var(--font-body); }
+.text-foreground { color: var(--fg) !important; }
+.text-primary { color: var(--primary) !important; }
+.text-muted-foreground { color: var(--muted-fg) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.border-custom { border-color: var(--border) !important; }
+.tracking-wide { letter-spacing: 0.1em; }
+.tracking-widest { letter-spacing: 0.2em; }
+.x-small { font-size: 0.7rem; }
+.object-cover { object-fit: cover; }
+.py-section { padding-top: 6rem; padding-bottom: 6rem; }
+
+@media (min-width: 768px) {
+  .py-section { padding-top: 8rem; padding-bottom: 8rem; }
+}
+
+/* ===== Gold Gradient Text ===== */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--gold-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Gold Line Divider ===== */
+.gold-line {
+  width: 4rem;
+  height: 1px;
+  background: linear-gradient(135deg, var(--primary), var(--gold-end));
+}
+
+/* ===== Overlays ===== */
+.overlay-hero {
+  background: linear-gradient(180deg, hsla(220, 15%, 8%, 0.3) 0%, hsla(220, 15%, 8%, 0.8) 100%);
+}
+
+/* ===== Navbar ===== */
+.transition-nav {
+  transition: all 0.5s ease;
+}
+
+.navbar-scrolled {
+  background-color: hsla(220, 15%, 8%, 0.95) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.nav-link-custom {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: var(--primary);
+}
+
+/* ===== Buttons ===== */
+.btn-outline-gold {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--primary);
+  color: var(--primary-fg);
+}
+
+.btn-solid-gold {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: var(--primary);
+  color: var(--primary-fg);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn-solid-gold:hover {
+  opacity: 0.9;
+  color: var(--primary-fg);
+}
+
+/* ===== Hero ===== */
+.hero-section img {
+  object-fit: cover;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 4rem;
+  background-color: hsla(38, 60%, 55%, 0.4);
+}
+
+/* ===== Brands ===== */
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--muted-fg);
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.brand-name:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .brand-name { font-size: 1.8rem; }
+}
+
+/* ===== Product Images ===== */
+.product-img {
+  height: 20rem;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .product-img { height: 30rem; }
+}
+
+/* ===== Contact Links ===== */
+.contact-link {
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary) !important;
+}
+
+/* ===== Scroll to Top ===== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary);
+  background: hsla(220, 15%, 8%, 0.8);
+  backdrop-filter: blur(8px);
+  color: var(--primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--primary);
+  color: var(--primary-fg);
+}
+
+/* ===== Scroll Reveal Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.delay-1 { transition-delay: 0.15s; }
+.reveal.delay-2 { transition-delay: 0.3s; }
+.reveal.delay-3 { transition-delay: 0.45s; }
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Hero Entrance Animations ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 1s; }
+
+/* ===== Offcanvas Dark Theme ===== */
+.offcanvas.bg-dark {
+  background-color: var(--bg) !important;
+}
+
+/* ===== Smooth Scrolling ===== */
+html { scroll-behavior: smooth; }
+
+/* ===== Bootstrap Overrides ===== */
+.navbar-brand:hover { color: var(--fg); }

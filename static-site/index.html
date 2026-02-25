@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Van.I — Italian Furniture & Architectural Design</title>
+  <meta name="description" content="Casa Van.I partners with prestigious Italian design houses for luxury furniture and architectural design in Thessaloniki." />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-expand fixed-top py-3 transition-nav">
+    <div class="container-lg d-flex align-items-center justify-content-between">
+      <a class="navbar-brand font-heading fs-4 tracking-wide text-foreground mb-0" href="#">
+        CASA <span class="text-primary">VAN.I</span>
+      </a>
+      <div class="d-none d-md-flex gap-4">
+        <a href="#" class="nav-link-custom">Home</a>
+        <a href="#products" class="nav-link-custom">Products</a>
+        <a href="#services" class="nav-link-custom">Services</a>
+        <a href="#contact" class="nav-link-custom">Contact</a>
+      </div>
+      <!-- Mobile toggle -->
+      <button class="btn d-md-none text-foreground border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end bg-dark" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="font-heading text-foreground">CASA <span class="text-primary">VAN.I</span></h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-3">
+      <a href="#" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Home</a>
+      <a href="#products" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Products</a>
+      <a href="#services" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Services</a>
+      <a href="#contact" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section position-relative vh-100 w-100 overflow-hidden">
+    <img src="images/hero-kitchen.jpg" alt="Luxury Italian kitchen by Casa Van.I" class="position-absolute top-0 start-0 w-100 h-100 object-cover" />
+    <div class="position-absolute top-0 start-0 w-100 h-100 overlay-hero"></div>
+    <div class="position-relative z-1 d-flex flex-column align-items-center justify-content-center h-100 px-3 text-center">
+      <h1 class="font-heading display-1 fw-light tracking-wide mb-3 animate-fade-in-up text-foreground">
+        CASA <span class="text-gold-gradient fw-medium">VAN.I</span>
+      </h1>
+      <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-5 animate-fade-in-up delay-1">
+        Architectural Design · Italian Furniture
+      </p>
+      <div class="d-flex gap-3 animate-fade-in-up delay-2">
+        <a href="#products" class="btn-outline-gold">Products</a>
+        <a href="#contact" class="btn-solid-gold">Contact</a>
+      </div>
+    </div>
+    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 text-center animate-fade-in delay-3">
+      <div class="scroll-line mx-auto mb-2"></div>
+      <span class="text-muted-foreground x-small tracking-widest text-uppercase font-body">Scroll</span>
+    </div>
+  </section>
+
+  <!-- About / Welcome Section -->
+  <section class="py-section px-3">
+    <div class="container-lg" style="max-width: 800px;">
+      <div class="text-center reveal">
+        <h2 class="font-heading display-5 fw-light mb-2 text-foreground">Welcome</h2>
+        <div class="gold-line mx-auto mb-4"></div>
+      </div>
+      <div class="reveal delay-1">
+        <p class="font-body text-muted-foreground text-center lh-lg">
+          Casa Van.I partners with prestigious Italian design houses to fulfill every
+          home furnishing need. From Miton kitchens and Caccaro wardrobes to Midj dining
+          furniture and Tonelli Design crystal creations — every piece is unique,
+          crafted with the finest quality, and tailored to your taste and lifestyle.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section class="py-4 border-top border-bottom border-custom">
+    <div class="container-lg py-4">
+      <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 gap-md-5">
+        <span class="brand-name reveal">Miton</span>
+        <span class="brand-name reveal delay-1">Caccaro</span>
+        <span class="brand-name reveal delay-2">Midj</span>
+        <span class="brand-name reveal delay-3">Tonelli Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-section px-3">
+    <div class="container-lg">
+      <div class="text-center reveal">
+        <h2 class="font-heading display-5 fw-light mb-2 text-foreground">Products</h2>
+        <div class="gold-line mx-auto mb-5"></div>
+      </div>
+
+      <!-- Kitchen -->
+      <div class="row align-items-center gy-4 mb-5">
+        <div class="col-md-6 reveal">
+          <div class="overflow-hidden">
+            <img src="images/hero-kitchen.jpg" alt="Kitchen" class="w-100 product-img" />
+          </div>
+        </div>
+        <div class="col-md-6 reveal delay-1">
+          <p class="text-primary font-body small tracking-widest text-uppercase">Miton</p>
+          <h3 class="font-heading display-6 fw-light text-foreground">Kitchen</h3>
+          <p class="text-muted-foreground font-body lh-lg">
+            With Miton's models, designing and building your dream kitchen is guaranteed. Impeccable finishes, premium materials, and innovative mechanisms deliver a result that is both elegant and fully functional.
+          </p>
+        </div>
+      </div>
+
+      <!-- Wardrobe -->
+      <div class="row align-items-center gy-4 mb-5 flex-md-row-reverse">
+        <div class="col-md-6 reveal">
+          <div class="overflow-hidden">
+            <img src="images/wardrobe.jpg" alt="Wardrobe" class="w-100 product-img" />
+          </div>
+        </div>
+        <div class="col-md-6 reveal delay-1">
+          <p class="text-primary font-body small tracking-widest text-uppercase">Caccaro</p>
+          <h3 class="font-heading display-6 fw-light text-foreground">Wardrobe</h3>
+          <p class="text-muted-foreground font-body lh-lg">
+            With 50 years of experience in bedroom furniture, Caccaro is a trusted choice for your space. The Italian house combines cutting-edge production methods with the soul and passion of its craftspeople.
+          </p>
+        </div>
+      </div>
+
+      <!-- Furniture -->
+      <div class="row align-items-center gy-4">
+        <div class="col-md-6 reveal">
+          <div class="overflow-hidden">
+            <img src="images/furniture.jpg" alt="Furniture" class="w-100 product-img" />
+          </div>
+        </div>
+        <div class="col-md-6 reveal delay-1">
+          <p class="text-primary font-body small tracking-widest text-uppercase">Midj · Tonelli</p>
+          <h3 class="font-heading display-6 fw-light text-foreground">Furniture</h3>
+          <p class="text-muted-foreground font-body lh-lg">
+            No need that can't be met, no taste that can't be satisfied. Midj and Tonelli will fill your space in a truly unique way with refined Italian design and craftsmanship.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-section px-3 bg-secondary">
+    <div class="container-lg">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-6 reveal">
+          <img src="images/architecture.jpg" alt="Architectural design" class="w-100 product-img" />
+        </div>
+        <div class="col-md-6 reveal delay-1">
+          <p class="text-primary font-body small tracking-widest text-uppercase">Services</p>
+          <h2 class="font-heading display-5 fw-light text-foreground">Architectural Design</h2>
+          <p class="text-muted-foreground font-body lh-lg">
+            Experienced architects with technical excellence and artistic vision
+            can bring your imagination to life through their designs.
+            Get in touch, share your vision, and we will design your dream space.
+          </p>
+          <a href="#contact" class="btn-outline-gold mt-2">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-section px-3">
+    <div class="container-lg" style="max-width: 800px;">
+      <div class="text-center reveal">
+        <h2 class="font-heading display-5 fw-light mb-2 text-foreground">Contact</h2>
+        <div class="gold-line mx-auto mb-5"></div>
+      </div>
+      <div class="row g-5 text-center">
+        <div class="col-md-4 reveal">
+          <div class="d-flex flex-column align-items-center gap-3">
+            <i class="bi bi-geo-alt fs-4 text-primary"></i>
+            <div>
+              <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-1">Address</p>
+              <p class="font-body text-foreground mb-0">Nikanoros 32<br/>54250, Thessaloniki</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal delay-1">
+          <div class="d-flex flex-column align-items-center gap-3">
+            <i class="bi bi-telephone fs-4 text-primary"></i>
+            <div>
+              <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-1">Phone</p>
+              <a href="tel:+302310000000" class="font-body text-foreground text-decoration-none contact-link">+30 2310 000 000</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal delay-2">
+          <div class="d-flex flex-column align-items-center gap-3">
+            <i class="bi bi-envelope fs-4 text-primary"></i>
+            <div>
+              <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-1">Email</p>
+              <a href="mailto:info@casavani.gr" class="font-body text-foreground text-decoration-none contact-link">info@casavani.gr</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 px-3 border-top border-custom">
+    <div class="container-lg d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <p class="font-heading fs-5 tracking-wide text-foreground mb-0">
+        CASA <span class="text-primary">VAN.I</span>
+      </p>
+      <p class="font-body x-small tracking-widest text-uppercase text-muted-foreground mb-0">
+        &copy; 2026 Casa Van.I — All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollToTop" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
