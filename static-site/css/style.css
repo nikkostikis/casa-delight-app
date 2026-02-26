@@ -10,7 +10,39 @@
   --gold-end: hsl(45, 70%, 65%);
 
   --font-heading: 'Cormorant Garamond', serif;
-  --font-body: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ===== Language Toggle ===== */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted-fg);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.lang-flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.lang-label {
+  font-weight: 500;
 }
 
 /* ===== Base ===== */
