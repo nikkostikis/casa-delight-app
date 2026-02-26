@@ -10,8 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts — Inter has excellent Greek support -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -23,16 +23,23 @@
       <a class="navbar-brand font-heading fs-4 tracking-wide text-foreground mb-0" href="#">
         CASA <span class="text-primary">VAN.I</span>
       </a>
-      <div class="d-none d-md-flex gap-4">
-        <a href="#" class="nav-link-custom">Home</a>
-        <a href="#products" class="nav-link-custom">Products</a>
-        <a href="#services" class="nav-link-custom">Services</a>
-        <a href="#contact" class="nav-link-custom">Contact</a>
+      <div class="d-flex align-items-center gap-4">
+        <div class="d-none d-md-flex gap-4">
+          <a href="#" class="nav-link-custom" data-i18n="nav_home">Home</a>
+          <a href="#products" class="nav-link-custom" data-i18n="nav_products">Products</a>
+          <a href="#services" class="nav-link-custom" data-i18n="nav_services">Services</a>
+          <a href="#contact" class="nav-link-custom" data-i18n="nav_contact">Contact</a>
+        </div>
+        <!-- Language Switcher -->
+        <button id="langToggle" class="lang-toggle" aria-label="Switch language">
+          <span class="lang-flag">🇬🇷</span>
+          <span class="lang-label">GR</span>
+        </button>
+        <!-- Mobile toggle -->
+        <button class="btn d-md-none text-foreground border-0 ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="bi bi-list fs-4"></i>
+        </button>
       </div>
-      <!-- Mobile toggle -->
-      <button class="btn d-md-none text-foreground border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <i class="bi bi-list fs-4"></i>
-      </button>
     </div>
   </nav>
 
@@ -43,10 +50,10 @@
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column gap-3">
-      <a href="#" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Home</a>
-      <a href="#products" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Products</a>
-      <a href="#services" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Services</a>
-      <a href="#contact" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Contact</a>
+      <a href="#" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas" data-i18n="nav_home">Home</a>
+      <a href="#products" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas" data-i18n="nav_products">Products</a>
+      <a href="#services" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas" data-i18n="nav_services">Services</a>
+      <a href="#contact" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas" data-i18n="nav_contact">Contact</a>
     </div>
   </div>
 
@@ -58,17 +65,17 @@
       <h1 class="font-heading display-1 fw-light tracking-wide mb-3 animate-fade-in-up text-foreground">
         CASA <span class="text-gold-gradient fw-medium">VAN.I</span>
       </h1>
-      <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-5 animate-fade-in-up delay-1">
+      <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-5 animate-fade-in-up delay-1" data-i18n="hero_subtitle">
         Architectural Design · Italian Furniture
       </p>
       <div class="d-flex gap-3 animate-fade-in-up delay-2">
-        <a href="#products" class="btn-outline-gold">Products</a>
-        <a href="#contact" class="btn-solid-gold">Contact</a>
+        <a href="#products" class="btn-outline-gold" data-i18n="hero_btn_products">Products</a>
+        <a href="#contact" class="btn-solid-gold" data-i18n="hero_btn_contact">Contact</a>
       </div>
     </div>
     <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 text-center animate-fade-in delay-3">
       <div class="scroll-line mx-auto mb-2"></div>
-      <span class="text-muted-foreground x-small tracking-widest text-uppercase font-body">Scroll</span>
+      <span class="text-muted-foreground x-small tracking-widest text-uppercase font-body" data-i18n="hero_scroll">Scroll</span>
     </div>
   </section>
 
@@ -76,11 +83,11 @@
   <section class="py-section px-3">
     <div class="container-lg" style="max-width: 800px;">
       <div class="text-center reveal">
-        <h2 class="font-heading display-5 fw-light mb-2 text-foreground">Welcome</h2>
+        <h2 class="font-heading display-5 fw-light mb-2 text-foreground" data-i18n="about_title">Welcome</h2>
         <div class="gold-line mx-auto mb-4"></div>
       </div>
       <div class="reveal delay-1">
-        <p class="font-body text-muted-foreground text-center lh-lg">
+        <p class="font-body text-muted-foreground text-center lh-lg" data-i18n="about_text">
           Casa Van.I partners with prestigious Italian design houses to fulfill every
           home furnishing need. From Miton kitchens and Caccaro wardrobes to Midj dining
           furniture and Tonelli Design crystal creations — every piece is unique,
@@ -106,7 +113,7 @@
   <section id="products" class="py-section px-3">
     <div class="container-lg">
       <div class="text-center reveal">
-        <h2 class="font-heading display-5 fw-light mb-2 text-foreground">Products</h2>
+        <h2 class="font-heading display-5 fw-light mb-2 text-foreground" data-i18n="products_title">Products</h2>
         <div class="gold-line mx-auto mb-5"></div>
       </div>
 
@@ -119,11 +126,11 @@
         </div>
         <div class="col-md-6 reveal delay-1">
           <p class="text-primary font-body small tracking-widest text-uppercase">Miton</p>
-          <h3 class="font-heading display-6 fw-light text-foreground">Kitchen</h3>
-          <p class="text-muted-foreground font-body lh-lg">
+          <h3 class="font-heading display-6 fw-light text-foreground" data-i18n="kitchen_title">Kitchen</h3>
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="kitchen_desc">
             With Miton's models, designing and building your dream kitchen is guaranteed. Impeccable finishes, premium materials, and innovative mechanisms deliver a result that is both elegant and fully functional.
           </p>
-          <button class="btn-outline-gold mt-2" data-bs-toggle="modal" data-bs-target="#modalKitchen">Read More</button>
+          <button class="btn-outline-gold mt-2" data-bs-toggle="modal" data-bs-target="#modalKitchen" data-i18n="read_more">Read More</button>
         </div>
       </div>
 
@@ -136,11 +143,11 @@
         </div>
         <div class="col-md-6 reveal delay-1">
           <p class="text-primary font-body small tracking-widest text-uppercase">Caccaro</p>
-          <h3 class="font-heading display-6 fw-light text-foreground">Wardrobe</h3>
-          <p class="text-muted-foreground font-body lh-lg">
+          <h3 class="font-heading display-6 fw-light text-foreground" data-i18n="wardrobe_title">Wardrobe</h3>
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="wardrobe_desc">
             With 50 years of experience in bedroom furniture, Caccaro is a trusted choice for your space. The Italian house combines cutting-edge production methods with the soul and passion of its craftspeople.
           </p>
-          <button class="btn-outline-gold mt-2" data-bs-toggle="modal" data-bs-target="#modalWardrobe">Read More</button>
+          <button class="btn-outline-gold mt-2" data-bs-toggle="modal" data-bs-target="#modalWardrobe" data-i18n="read_more">Read More</button>
         </div>
       </div>
 
@@ -153,11 +160,11 @@
         </div>
         <div class="col-md-6 reveal delay-1">
           <p class="text-primary font-body small tracking-widest text-uppercase">Midj · Tonelli</p>
-          <h3 class="font-heading display-6 fw-light text-foreground">Furniture</h3>
-          <p class="text-muted-foreground font-body lh-lg">
+          <h3 class="font-heading display-6 fw-light text-foreground" data-i18n="furniture_title">Furniture</h3>
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="furniture_desc">
             No need that can't be met, no taste that can't be satisfied. Midj and Tonelli will fill your space in a truly unique way with refined Italian design and craftsmanship.
           </p>
-          <button class="btn-outline-gold mt-2" data-bs-toggle="modal" data-bs-target="#modalFurniture">Read More</button>
+          <button class="btn-outline-gold mt-2" data-bs-toggle="modal" data-bs-target="#modalFurniture" data-i18n="read_more">Read More</button>
         </div>
       </div>
     </div>
@@ -171,15 +178,15 @@
           <img src="images/architecture.jpg" alt="Architectural design" class="w-100 product-img" />
         </div>
         <div class="col-md-6 reveal delay-1">
-          <p class="text-primary font-body small tracking-widest text-uppercase">Services</p>
-          <h2 class="font-heading display-5 fw-light text-foreground">Architectural Design</h2>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-primary font-body small tracking-widest text-uppercase" data-i18n="services_label">Services</p>
+          <h2 class="font-heading display-5 fw-light text-foreground" data-i18n="services_title">Architectural Design</h2>
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="services_desc">
             Experienced architects with technical excellence and artistic vision
             can bring your imagination to life through their designs.
             Get in touch, share your vision, and we will design your dream space.
           </p>
-          <a href="#contact" class="btn-outline-gold mt-2">Get in Touch</a>
-          <button class="btn-outline-gold mt-2 ms-2" data-bs-toggle="modal" data-bs-target="#modalArchitecture">Read More</button>
+          <a href="#contact" class="btn-outline-gold mt-2" data-i18n="services_cta">Get in Touch</a>
+          <button class="btn-outline-gold mt-2 ms-2" data-bs-toggle="modal" data-bs-target="#modalArchitecture" data-i18n="read_more">Read More</button>
         </div>
       </div>
     </div>
@@ -189,7 +196,7 @@
   <section id="contact" class="py-section px-3">
     <div class="container-lg" style="max-width: 800px;">
       <div class="text-center reveal">
-        <h2 class="font-heading display-5 fw-light mb-2 text-foreground">Contact</h2>
+        <h2 class="font-heading display-5 fw-light mb-2 text-foreground" data-i18n="contact_title">Contact</h2>
         <div class="gold-line mx-auto mb-5"></div>
       </div>
       <div class="row g-5 text-center">
@@ -197,8 +204,8 @@
           <div class="d-flex flex-column align-items-center gap-3">
             <i class="bi bi-geo-alt fs-4 text-primary"></i>
             <div>
-              <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-1">Address</p>
-              <p class="font-body text-foreground mb-0">Nikanoros 32<br/>54250, Thessaloniki</p>
+              <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-1" data-i18n="contact_address_label">Address</p>
+              <p class="font-body text-foreground mb-0" data-i18n="contact_address">Nikanoros 32<br/>54250, Thessaloniki</p>
             </div>
           </div>
         </div>
@@ -206,7 +213,7 @@
           <div class="d-flex flex-column align-items-center gap-3">
             <i class="bi bi-telephone fs-4 text-primary"></i>
             <div>
-              <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-1">Phone</p>
+              <p class="font-body small tracking-widest text-uppercase text-muted-foreground mb-1" data-i18n="contact_phone_label">Phone</p>
               <a href="tel:+302310000000" class="font-body text-foreground text-decoration-none contact-link">+30 2310 000 000</a>
             </div>
           </div>
@@ -230,7 +237,7 @@
       <p class="font-heading fs-5 tracking-wide text-foreground mb-0">
         CASA <span class="text-primary">VAN.I</span>
       </p>
-      <p class="font-body x-small tracking-widest text-uppercase text-muted-foreground mb-0">
+      <p class="font-body x-small tracking-widest text-uppercase text-muted-foreground mb-0" data-i18n="footer_copy">
         &copy; 2026 Casa Van.I — All Rights Reserved
       </p>
     </div>
@@ -248,19 +255,19 @@
         <div class="modal-header border-0">
           <div>
             <p class="text-primary font-body small tracking-widest text-uppercase mb-1">Miton</p>
-            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalKitchenLabel">Kitchen</h5>
+            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalKitchenLabel" data-i18n="kitchen_title">Kitchen</h5>
           </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img src="images/hero-kitchen.jpg" alt="Kitchen detail" class="w-100 mb-4 product-img" style="height:auto;" />
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="kitchen_modal_p1">
             With Miton's models, designing and building your dream kitchen is guaranteed. Impeccable finishes, premium materials, and innovative mechanisms deliver a result that is both elegant and fully functional.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="kitchen_modal_p2">
             Every Miton kitchen is born from a dialogue between the client and the designer. Modular systems allow endless configurations — from compact urban kitchens to grand open-plan layouts. Soft-close drawers, integrated lighting, and handleless profiles are just the beginning of what Miton offers.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="kitchen_modal_p3">
             Materials range from natural oak and walnut veneers to lacquered glass and Fenix nano-tech surfaces, all sourced and crafted in Italy. Miton's commitment to sustainability means low-emission panels and water-based finishes as standard.
           </p>
         </div>
@@ -274,19 +281,19 @@
         <div class="modal-header border-0">
           <div>
             <p class="text-primary font-body small tracking-widest text-uppercase mb-1">Caccaro</p>
-            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalWardrobeLabel">Wardrobe</h5>
+            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalWardrobeLabel" data-i18n="wardrobe_title">Wardrobe</h5>
           </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img src="images/wardrobe.jpg" alt="Wardrobe detail" class="w-100 mb-4 product-img" style="height:auto;" />
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="wardrobe_modal_p1">
             With 50 years of experience in bedroom furniture, Caccaro is a trusted choice for your space. The Italian house combines cutting-edge production methods with the soul and passion of its craftspeople.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="wardrobe_modal_p2">
             Caccaro's wardrobes feature the patented Freedhome system — a revolutionary internal organisation concept that adapts to your lifestyle. Sliding, hinged, or walk-in: every solution is fully customisable in dimensions, finishes, and internal fittings.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="wardrobe_modal_p3">
             From the bedroom to the living area, Caccaro designs storage that blends seamlessly into your architecture. Choose from over 100 finishes including matt lacquers, open-pore wood, and mirrored surfaces.
           </p>
         </div>
@@ -300,19 +307,19 @@
         <div class="modal-header border-0">
           <div>
             <p class="text-primary font-body small tracking-widest text-uppercase mb-1">Midj · Tonelli</p>
-            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalFurnitureLabel">Furniture</h5>
+            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalFurnitureLabel" data-i18n="furniture_title">Furniture</h5>
           </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img src="images/furniture.jpg" alt="Furniture detail" class="w-100 mb-4 product-img" style="height:auto;" />
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="furniture_modal_p1">
             No need that can't be met, no taste that can't be satisfied. Midj and Tonelli will fill your space in a truly unique way with refined Italian design and craftsmanship.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="furniture_modal_p2">
             Midj specialises in tables, chairs, and stools that merge metal, wood, and upholstery with sculptural flair. Each piece is made in Italy using certified materials and advanced metalworking techniques.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="furniture_modal_p3">
             Tonelli Design is renowned for its mastery of crystal glass — tables, shelving, and decorative objects that transform transparency into art. Extra-clear, curved, and fused glass pieces bring lightness and sophistication to any room.
           </p>
         </div>
@@ -325,20 +332,20 @@
       <div class="modal-content custom-modal">
         <div class="modal-header border-0">
           <div>
-            <p class="text-primary font-body small tracking-widest text-uppercase mb-1">Services</p>
-            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalArchitectureLabel">Architectural Design</h5>
+            <p class="text-primary font-body small tracking-widest text-uppercase mb-1" data-i18n="services_label">Services</p>
+            <h5 class="modal-title font-heading display-6 fw-light text-foreground" id="modalArchitectureLabel" data-i18n="services_title">Architectural Design</h5>
           </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img src="images/architecture.jpg" alt="Architecture detail" class="w-100 mb-4 product-img" style="height:auto;" />
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="arch_modal_p1">
             Experienced architects with technical excellence and artistic vision can bring your imagination to life through their designs. Get in touch, share your vision, and we will design your dream space.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="arch_modal_p2">
             Our architectural studio offers full-service design — from initial concept sketches and 3D visualisations to detailed construction drawings and on-site supervision. Whether it's a private residence, a retail space, or a hospitality project, we tailor every detail to your brief.
           </p>
-          <p class="text-muted-foreground font-body lh-lg">
+          <p class="text-muted-foreground font-body lh-lg" data-i18n="arch_modal_p3">
             We integrate Italian furnishing selections directly into the architectural plan, ensuring a cohesive aesthetic from structure to styling. Energy efficiency, natural lighting, and material sustainability are embedded into every project we undertake.
           </p>
         </div>
